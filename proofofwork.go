@@ -1,11 +1,11 @@
 package main
 
 import (
-	"math/big"
 	"bytes"
-	"fmt"
 	"crypto/sha256"
+	"fmt"
 	"math"
+	"math/big"
 )
 
 var (

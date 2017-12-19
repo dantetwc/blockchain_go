@@ -1,13 +1,13 @@
 package main
 
 import (
+	"bytes"
+	"crypto/elliptic"
+	"encoding/gob"
 	"fmt"
-	"os"
 	"io/ioutil"
 	"log"
-	"encoding/gob"
-	"crypto/elliptic"
-	"bytes"
+	"os"
 )
 
 type Wallets struct {

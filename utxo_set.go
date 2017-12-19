@@ -1,9 +1,9 @@
 package main
 
 import (
+	"encoding/hex"
 	"github.com/boltdb/bolt"
 	"log"
-	"encoding/hex"
 )
 
 const utxoBucket = "chainstate"

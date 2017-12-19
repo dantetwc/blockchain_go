@@ -1,15 +1,15 @@
 package main
 
 import (
-	"fmt"
 	"bytes"
-	"encoding/gob"
-	"log"
-	"crypto/sha256"
-	"encoding/hex"
 	"crypto/ecdsa"
-	"crypto/rand"
 	"crypto/elliptic"
+	"crypto/rand"
+	"crypto/sha256"
+	"encoding/gob"
+	"encoding/hex"
+	"fmt"
+	"log"
 	"math/big"
 	"strings"
 )

@@ -1,10 +1,10 @@
 package main
 
 import (
-	"testing"
-	"github.com/magiconair/properties/assert"
 	"encoding/hex"
 	"fmt"
+	"github.com/magiconair/properties/assert"
+	"testing"
 )
 
 func TestNewMerkleNode(t *testing.T) {

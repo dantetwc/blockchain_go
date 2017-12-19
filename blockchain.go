@@ -1,14 +1,14 @@
 package main
 
 import (
-	"github.com/boltdb/bolt"
-	"log"
-	"fmt"
-	"os"
-	"encoding/hex"
 	"bytes"
-	"github.com/pkg/errors"
 	"crypto/ecdsa"
+	"encoding/hex"
+	"fmt"
+	"github.com/boltdb/bolt"
+	"github.com/pkg/errors"
+	"log"
+	"os"
 )
 
 const dbFile = "blockchain.db"
@@ -195,7 +195,7 @@ func (bc *Blockchain) FindTransaction(ID []byte) (Transaction, error) {
 	return Transaction{}, errors.New("Transaction is not found")
 }
 
-func (bc *Blockchain) SignTransaction(tx *Transaction, privKey ecdsa.PrivateKey)  {
+func (bc *Blockchain) SignTransaction(tx *Transaction, privKey ecdsa.PrivateKey) {
 	prevTXs := make(map[string]Transaction)
 
 	for _, vin := range tx.Vin {
@@ -209,7 +209,7 @@ func (bc *Blockchain) SignTransaction(tx *Transaction, privKey ecdsa.PrivateKey)
 	tx.Sign(privKey, prevTXs)
 }
 
-func (bc *Blockchain) VerifyTransaction(tx *Transaction) bool  {
+func (bc *Blockchain) VerifyTransaction(tx *Transaction) bool {
 	if tx.IsCoinbase() {
 		return true
 	}

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"log"
 	"fmt"
+	"log"
 )
 
 func (cli *CLI) getBalance(address string) {
@@ -16,7 +16,7 @@ func (cli *CLI) getBalance(address string) {
 
 	balance := 0
 	pubKeyHash := Base58Decode([]byte(address))
-	pubKeyHash = pubKeyHash[1: len(pubKeyHash)-addressChecksumLen]
+	pubKeyHash = pubKeyHash[1 : len(pubKeyHash)-addressChecksumLen]
 	UTXOs := UTXOSet.FindUTXO(pubKeyHash)
 
 	for _, out := range UTXOs {

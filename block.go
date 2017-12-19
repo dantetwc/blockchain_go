@@ -2,9 +2,9 @@ package main
 
 import (
 	"bytes"
-	"time"
 	"encoding/gob"
 	"log"
+	"time"
 )
 
 type Block struct {

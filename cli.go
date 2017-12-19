@@ -2,9 +2,9 @@ package main
 
 import (
 	"flag"
-	"os"
-	"log"
 	"fmt"
+	"log"
+	"os"
 )
 
 type CLI struct {
@@ -39,7 +39,6 @@ func (cli *CLI) Run() {
 	printChainCmd := flag.NewFlagSet("printchain", flag.ExitOnError)
 	reindexUTXOCmd := flag.NewFlagSet("reindexutxo", flag.ExitOnError)
 	sendCmd := flag.NewFlagSet("send", flag.ExitOnError)
-
 
 	getBalanceAddress := getBalanceCmd.String("address", "", "The address to get balance for")
 	createBlockchainAddress := createBlockchainCmd.String("address", "", "The address to send genesis block reward to")
@@ -136,7 +135,3 @@ func (cli *CLI) Run() {
 		cli.send(*sendFrom, *sendTo, *sendAmount)
 	}
 }
-
-
-
-
